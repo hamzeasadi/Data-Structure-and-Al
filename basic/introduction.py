@@ -34,7 +34,6 @@ def RootEval(x):
 
 
 
-
 if __name__ == '__main__':
     num = input("please enter a number to calculate the root value: ")
     RootEval(num)
