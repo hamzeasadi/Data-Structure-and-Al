@@ -21,7 +21,14 @@ def Root(x):
         root_val = cmath.sqrt(x)
         print(f"the root value of given number, {x} is a complex number: {root_val}")
 
+# Python Program to Find the Square Root based on eval function
 
+def RootEval(x):
+    x = eval(x)
+    if isinstance(x, complex) or x<0:
+        print(f"the square root of {x} is {cmath.sqrt(x)}")
+    else:
+        print(f"the square root of {x} is {math.sqrt(x)}")
 
 
 
@@ -30,4 +37,5 @@ def Root(x):
 
 if __name__ == '__main__':
     num = input("please enter a number to calculate the root value: ")
-    Root(num)
+    RootEval(num)
+    # Root(num)
