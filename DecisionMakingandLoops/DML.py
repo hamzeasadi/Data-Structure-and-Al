@@ -62,7 +62,21 @@ def signCheck(x):
     else:
         print(f"{x} is zero")
 
-
+# check if the number is even or not
+def iseven(x):
+    """check if the number is even or not
+    args:
+        a arbitrary number as input
+    return:
+        print the result of check the function
+    Raises:
+        not any exception araised
+    """
+    x = eval(x)
+    if x%2==0:
+        print(f"{x} is even")
+    else:
+        print(f"{x} is odd")
 
 
 
