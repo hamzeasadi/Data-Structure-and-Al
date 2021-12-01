@@ -46,6 +46,14 @@ def factorial(n):
 
 # check positivity of a number
 def signCheck(x):
+    """sign check function, it will check if a number is positive , negative, or zero
+    args:
+        an aribitray number
+    return:
+        the sign of given n umber
+    exception:
+        no error handling
+    """
     x = eval(x)
     if x>0:
         print(f"{x} is positive")
@@ -60,5 +68,6 @@ def signCheck(x):
 
 
 if __name__ == '__main__':
+    print(signCheck.__doc__)
     num = input("please enter a number to compute its sign: ")
     signCheck(num)
