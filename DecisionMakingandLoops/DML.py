@@ -44,7 +44,15 @@ def factorial(n):
     else:
         raise ValueError
 
-
+# check positivity of a number
+def signCheck(x):
+    x = eval(x)
+    if x>0:
+        print(f"{x} is positive")
+    elif x<0:
+        print(f"{x} is negative")
+    else:
+        print(f"{x} is zero")
 
 
 
@@ -52,6 +60,5 @@ def factorial(n):
 
 
 if __name__ == '__main__':
-    num = eval(input("please enter a number to compute its factorial: "))
-    fact_n = factorial(num)
-    print(f"the factorial of {num} is {fact_n}")
+    num = input("please enter a number to compute its sign: ")
+    signCheck(num)
