@@ -47,6 +47,19 @@ def AreaTriangle(*x):
             print("with given values is impossible to build a triangle")
 
 
+# Python Program to Solve Quadratic Equation
+def QuadraticSolution(**coefficients):
+    """
+    Please input coefficients of the equation by following conventions
+    a=coefficient vale of x2
+    b=coefficient value of x
+    c=constant coefficient
+    """
+    a, b, c = coefficients['a'], coefficients['b'], coefficients['c']
+    delta = cmath.sqrt(b**2 - 4*(a*c))
+    ans1 = (-b - delta)/(2*a)
+    ans2 = (-b + delta)/(2*a)
+    print(f"answers for {a}x2 - {b}x + {c} = 0 : {ans1:.3f} and {ans2:.3f}")
 
 
 
@@ -55,7 +68,6 @@ def AreaTriangle(*x):
 
 
 if __name__ == '__main__':
-    a, b, c = input("please enter three sides of a triangle with , seperator: ").split(sep=',')
-    a, b, c = float(a), float(b), float(c)
-    area = AreaTriangle(a, b, c)
-    print(f"area of the triangle is: {area:.3f}")
+    a, b, c = input("enter quadratic equation coefficients (seperate values with ','): ").split(sep=',')
+    coef = dict(a=eval(a), b=eval(b), c=eval(c))
+    QuadraticSolution(**coef)
