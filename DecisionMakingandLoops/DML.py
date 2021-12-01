@@ -78,10 +78,19 @@ def iseven(x):
     else:
         print(f"{x} is odd")
 
-
+# check leap year
+def isLeap(year):
+    """this function simply check if a given year is leap or not
+    args:
+        year: its a integer value
+    return:
+        print True if it's a leap year
+    Raise:
+        this function raise an error if the given value is not int
+    """
 
 
 if __name__ == '__main__':
-    print(signCheck.__doc__)
+    print(iseven.__doc__)
     num = input("please enter a number to compute its sign: ")
-    signCheck(num)
+    iseven(num)
