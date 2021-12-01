@@ -89,15 +89,30 @@ def isLeap(year):
         this function raise an error if the given value is not int
     """
     if isinstance(year, int):
-        if x%4==0 and x%100 !=0:
-            print(f"{x} is a leap year")
+        if year%4==0 and year%100 !=0:
+            print(f"{year} is a leap year")
+        elif year%400 ==0:
+            print(f"{year} is a leap year")
         else:
-            print(f"{x} is not a leap year")
+            print(f"{year} is not a leap year")
     else:
         raise TypeError
+
+# Python Program to Find the Largest Among Three Numbers
+def max0f3(*numbers):
+    """find the maximum number in 3 numbers
+    args:
+        3 float or int number
+    return:
+        it will print the lagest value of the 3 numbers
+    Raises:
+
+    """
 
 
 if __name__ == '__main__':
     print(isLeap.__doc__)
-    num = input("please enter the year: ")
-    isLeap(num)
+    # num = input("please enter the year: ")
+    # num = eval(num)
+    leaps = filter(isLeap, list(range(2000, 2024, 1)))
+    print(list(leaps))
