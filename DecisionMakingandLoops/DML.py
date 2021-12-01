@@ -88,9 +88,16 @@ def isLeap(year):
     Raise:
         this function raise an error if the given value is not int
     """
+    if isinstance(year, int):
+        if x%4==0 and x%100 !=0:
+            print(f"{x} is a leap year")
+        else:
+            print(f"{x} is not a leap year")
+    else:
+        raise TypeError
 
 
 if __name__ == '__main__':
-    print(iseven.__doc__)
-    num = input("please enter a number to compute its sign: ")
-    iseven(num)
+    print(isLeap.__doc__)
+    num = input("please enter the year: ")
+    isLeap(num)
