@@ -30,11 +30,32 @@ def RootEval(x):
     else:
         print(f"the square root of {x} is {math.sqrt(x)}")
 
+# Python Program to Calculate the Area of a Triangle
+def AreaTriangle(*x):
+
+    if len(x) != 3:
+        raise ValueError
+    else:
+        x = sorted(x)
+        if x[-1] < (x[0] + x[1]):
+            perimeter = sum(x)/2
+            area = perimeter
+            for val in x:
+                area *=(perimeter - val)
+            return math.sqrt(area)
+        else:
+            print("with given values is impossible to build a triangle")
+
+
+
+
+
 
 
 
 
 if __name__ == '__main__':
-    num = input("please enter a number to calculate the root value: ")
-    RootEval(num)
-    # Root(num)
+    a, b, c = input("please enter three sides of a triangle with , seperator: ").split(sep=',')
+    a, b, c = float(a), float(b), float(c)
+    area = AreaTriangle(a, b, c)
+    print(f"area of the triangle is: {area}")
