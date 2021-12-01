@@ -99,20 +99,25 @@ def isLeap(year):
         raise TypeError
 
 # Python Program to Find the Largest Among Three Numbers
-def max0f3(*numbers):
+def maxof3(*numbers):
     """find the maximum number in 3 numbers
     args:
         3 float or int number
     return:
-        it will print the lagest value of the 3 numbers
+        it will return the lagest value of the 3 numbers
     Raises:
 
     """
+    my_max = numbers[0]
+    if numbers[1]>my_max:
+        my_max = numbers[1]
+    elif numbers[2]>my_max:
+        my_max = numbers[2]
+    return my_max
 
 
 if __name__ == '__main__':
-    print(isLeap.__doc__)
-    # num = input("please enter the year: ")
-    # num = eval(num)
-    leaps = filter(isLeap, list(range(2000, 2024, 1)))
-    print(list(leaps))
+    a, b, c = input("enter the 3 required comma seperated numbers : ").split(',')
+    a, b, c = eval(a), eval(b), eval(c)
+    themax = maxof3(a, b, c)
+    print(f"max of {a}, {b}, {c} is {themax}")
