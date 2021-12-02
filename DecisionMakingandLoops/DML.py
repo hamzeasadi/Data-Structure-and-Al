@@ -175,7 +175,18 @@ def simpleFibo(n:int):
     else:
         raise ValueError
 
+# implement fibonacci sequence efficiently
+def fibonacci(n: int):
+    """this is a more efficient way of implementing fibonacci sequence in python
+    arg:
+        n: a positive integer
+    return:
+        a(n): fibonaccie squence at point n (a(n) = a(n-1)+a(n-2))
+    Raises:
+        raise an value error if the number is less than zero
+    """
+
 if __name__ == '__main__':
-    fib_n = int(input("please enter the positive integer value: "))
-    fib = simpleFibo(fact_n)
+    fib_n = int(input("please enter the positive integer value (,): "))
+    fib = simpleFibo(fib_n)
     print(f"fibonaci({fib_n})={fib}")
