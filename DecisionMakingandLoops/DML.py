@@ -159,4 +159,6 @@ def factorial(n: int):
 
 
 if __name__ == '__main__':
-    # fact_n umer
+    fact_n = int(input("please enter the positive integer value: "))
+    fact = factorial(fact_n)
+    print(f"{fact_n}!={fact}")
