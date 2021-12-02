@@ -135,12 +135,12 @@ def primeCheck(n: int):
         if n%i==0 or (n+1)%i==0:
             return False
         i += 6
-        else:
-            return True
+
+    return True
 
 
 if __name__ == '__main__':
-    a, b, c = input("enter the 3 required comma seperated numbers : ").split(',')
-    a, b, c = eval(a), eval(b), eval(c)
-    themax = maxof3(a, b, c)
-    print(f"max of {a}, {b}, {c} is {themax}")
+    numbers = list(range(1, int(1e+3), 1))
+    primes = filter(primeCheck, numbers)
+    print(list(primes))
+    
