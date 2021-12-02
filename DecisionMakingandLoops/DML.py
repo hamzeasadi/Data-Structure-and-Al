@@ -176,6 +176,7 @@ def simpleFibo(n:int):
         raise ValueError
 
 # implement fibonacci sequence efficiently
+cache = {0:1, 1:1}
 def fibonacci(n: int):
     """this is a more efficient way of implementing fibonacci sequence in python
     arg:
@@ -185,6 +186,14 @@ def fibonacci(n: int):
     Raises:
         raise an value error if the number is less than zero
     """
+    if n>0:
+        if n in cache.keys():
+            return 1
+        cache[n] = fibonacci(n-1) + fibonacci(n-2)
+        return cache[n]
+
+    else:
+        raise ValueError(f"positive integer expected, got {n}")
 
 if __name__ == '__main__':
     fib_n = int(input("please enter the positive integer value (,): "))
