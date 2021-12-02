@@ -157,6 +157,16 @@ def factorial(n: int):
     else:
         raise ValueError
 
+# implement a simple function to compute the fibonaci series
+def simpleFibo(n:int):
+    """This is a simple implementation of fibonaci series computing function
+    args:
+        n: an positive ingteger number
+    return:
+        a(n): fibonaci series value at that step (a(n)= a(n-1) + a(n-2)
+    Raises:
+        None
+    """
 
 if __name__ == '__main__':
     fact_n = int(input("please enter the positive integer value: "))
