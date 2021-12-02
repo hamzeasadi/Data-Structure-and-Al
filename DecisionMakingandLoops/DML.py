@@ -139,8 +139,18 @@ def primeCheck(n: int):
     return True
 
 
+# implement factorial computing
+def factorial(n: int):
+    """this function gets an positive integer number a returns its factorial
+    args:
+        n: an positive integer variable
+    return:
+        n!: it will return the factorial of n (n!=n*(n-1)...2*1)
+    Raises:
+        It will raise an value error if n>100
+    """
+
+
+
 if __name__ == '__main__':
-    numbers = list(range(1, int(1e+3), 1))
-    primes = filter(primeCheck, numbers)
-    print(list(primes))
-    
+    # fact_n umer
