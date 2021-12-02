@@ -125,7 +125,18 @@ def primeCheck(n: int):
     Raises:
         None
     """
-
+    root_n = math.sqrt(n)
+    if n<=3:
+        return n>1
+    if n%2==0 or n%3==0:
+        return False
+    i=5
+    while i< n:
+        if n%i==0 or (n+1)%i==0:
+            return False
+        i += 6
+        else:
+            return True
 
 
 if __name__ == '__main__':
