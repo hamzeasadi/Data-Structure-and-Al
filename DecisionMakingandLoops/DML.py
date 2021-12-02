@@ -165,8 +165,15 @@ def simpleFibo(n:int):
     return:
         a(n): fibonaci series value at that step (a(n)= a(n-1) + a(n-2)
     Raises:
-        None
+        raise an error if the given number is less than zero
     """
+    if n > -1:
+        if n < 2:
+            return 1
+        else:
+            return simpleFibo(n-1) + simpleFibo(n-2)
+    else:
+        raise ValueError
 
 if __name__ == '__main__':
     fact_n = int(input("please enter the positive integer value: "))
