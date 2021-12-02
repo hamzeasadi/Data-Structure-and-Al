@@ -176,6 +176,6 @@ def simpleFibo(n:int):
         raise ValueError
 
 if __name__ == '__main__':
-    fact_n = int(input("please enter the positive integer value: "))
-    fact = factorial(fact_n)
-    print(f"{fact_n}!={fact}")
+    fib_n = int(input("please enter the positive integer value: "))
+    fib = simpleFibo(fact_n)
+    print(f"fibonaci({fib_n})={fib}")
