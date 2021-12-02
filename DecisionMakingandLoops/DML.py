@@ -115,6 +115,18 @@ def maxof3(*numbers):
         my_max = numbers[2]
     return my_max
 
+# check if a number is prime
+def primeCheck(n: int):
+    """this function checks if a number is prime
+    args:
+        an integer number
+    return:
+        if input number is prime it will return True otherwise False
+    Raises:
+        None
+    """
+
+
 
 if __name__ == '__main__':
     a, b, c = input("enter the 3 required comma seperated numbers : ").split(',')
