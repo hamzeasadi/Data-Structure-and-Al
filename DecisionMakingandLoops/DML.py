@@ -286,18 +286,18 @@ def PlusMinus(arr: list):
     Raises:
         None
     """
-    # list
-    # positive_pro =
+    n = len(arr)
+    negatives = sum([x<0 for x in arr])/n
+    zeros = sum([x==0 for x in arr])/n
+    positives = sum([x>0 for x in arr])/n
+    print(f"{negatives:0.6f}\n {zeros:.6f}\n{positives:.6f}")
 
 
 
 if __name__ == '__main__':
-    arr = [1, 0, 2, -1, -2, 0, 1]
-    arr.sort()
-    n = len(arr)
-    negatives = arr.index(0)
-    zeros = arr.count(0)
-    positives = n - zeros - negatives
-    print(f"{negatives/n:0.6f}\n {zeros/n:.6f}\n{positives/n:.6f}")
+    arr = [1, 2, -1, -2, 1]
+    # zero_arr = [i<0 for i in arr]
+    # print(zero_arr, sum(zero_arr))
+    PlusMinus(arr)
 
     # PlusMinus(arr)
