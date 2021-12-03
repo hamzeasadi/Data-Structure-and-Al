@@ -246,6 +246,9 @@ def pyramid(n):
     Raises:
         ValueError: if n is not a positive integer
     """
+    for i in range(n):
+        for j in range(n+1):
+            print("*", end='')
 
 
 if __name__ == '__main__':
