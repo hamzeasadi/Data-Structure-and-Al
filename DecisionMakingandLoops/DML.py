@@ -214,9 +214,9 @@ class FiboClass:
             return self.cache[n]
         self.cache[n] = self.cache[n-1] + self.cache[n-2]
         return self.cache[n]
-        
+
 
 if __name__ == '__main__':
     fib_n = int(input("please enter the positive integer value: "))
-    fib = fibonacci(fib_n)
-    print(f"fibonaci({fib_n})={fib}")
+    fibo = FiboClass()
+    print(f"fibonaci({fib_n})={fibo(fib_n)}")
