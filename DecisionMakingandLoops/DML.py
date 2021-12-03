@@ -246,15 +246,14 @@ def pyramid(n):
     Raises:
         ValueError: if n is not a positive integer
     """
+    if not(n>0 and isinstance(n, int)):
+        raise ValueError(f"Expected a positive integer, Got {n}")
+        
     for i in range(n):
         for j in range(n+1):
             print("*", end='')
 
 
 if __name__ == '__main__':
-    # arms = eval(input("please enter the positive integer value: "))
-    # arms_ck = Armstrong(arms)
-    numbers = list(range(10, int(1e+5), 1))
-    arms_check = filter(Armstrong, numbers)
-    # print(f"{arms} armstrong check: {arms_ck}")
-    print(list(arms_check))
+    num_rows = eval(input("please enter the number of rows: "))
+    pyramid(num_rows)
