@@ -208,15 +208,21 @@ class FiboClass:
         self.cache = {0:1, 1:1}
 
     def __call__(self, n):
-        if n < 0 or isinstance(n, int):
+        if n < 0 or (not isinstance(n, int)):
             raise ValueError(f"Except a positive integer, Got {n}")
         if n < len(self.cache):
             return self.cache[n]
-        self.cache[n] = self.cache[n-1] + self.cache[n-2]
+        self.cache[n] = self(n-1) + self(n-2)
         return self.cache[n]
+
+# check armstrong number of n digits
+def Armstrong(num):
+    """
+    """
 
 
 if __name__ == '__main__':
     fib_n = int(input("please enter the positive integer value: "))
     fibo = FiboClass()
-    print(f"fibonaci({fib_n})={fibo(fib_n)}")
+    out = fibo(fib_n)
+    print(f"fibonaci({fib_n})={out}")
