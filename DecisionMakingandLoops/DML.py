@@ -258,16 +258,19 @@ def pyramid(n):
 
 # define a function to subtract matrix diognals
 def diognalDifference(arr):
-    pass
+    """a function to calculate diognal difference of square matrix
+    args:
+        arr: the square matrix
+    return:
+        the absolute difference between diognals
+    Raises:
+        None
+    """
 
 
 
 if __name__ == '__main__':
-    income_e0 = np.array([125, 100, 70, 120, 60, 220, 75])
-    income_e1 = np.array([95, 85, 90])
-    income = np.concatenate((income_e0, income_e1), axis=0)
-    income_e0_stat = (income_e0.mean(), income_e0.std())
-    income_e1_stat = (income_e1.mean(), income_e1.std())
-    print(f"evade No: {income_e0_stat}, evade Yes: {income_e1_stat}")
-    print(income)
-    print(f"income stat: mean={income.mean()}, std={income.std()}")
+    fptr = open(os.environ('OUTPUT_PATH'), 'w')
+    n = int(input().strip())
+    arr = []
+    for _
