@@ -229,17 +229,17 @@ def Armstrong(num):
         raise ValueError(f"Expected a positive integer, Got {num}")
     else:
         n = len(str(num))
+        temp = num
         sum = 0.
         while num != 0:
             sum += (num%10)**n
             num = num //10
-        return sum
+        return (sum == temp)
 
 
 
 
 if __name__ == '__main__':
-    fib_n = int(input("please enter the positive integer value: "))
-    fibo = FiboClass()
-    out = fibo(fib_n)
-    print(f"fibonaci({fib_n})={out}")
+    arms = eval(input("please enter the positive integer value: "))
+    arms_ck = Armstrong(arms)
+    print("{arms} armstrong check: {arms_ck}")
