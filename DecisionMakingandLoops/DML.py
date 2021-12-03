@@ -225,6 +225,17 @@ def Armstrong(num):
     Raises:
         raise a value error if the given number is not a positive integer
     """
+    if not (num<1 and isinstance(num, int)):
+        raise ValueError(f"Expected a positive integer, Got {num}")
+    else:
+        n = len(str(num))
+        sum = 0.
+        while num != 0:
+            sum += (num%10)**n
+            num = num //10
+        return sum
+
+
 
 
 if __name__ == '__main__':
