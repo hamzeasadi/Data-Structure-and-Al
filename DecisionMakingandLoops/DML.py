@@ -300,12 +300,19 @@ def staricase(n: int):
     Raises:
         it will raise an value error if an negative number given
     """
+    if (n>0 and n<=100):
+        x = ' '
+        sharp = '#'
+        for i in range(1, n):
+            t = (n-i)
+            print(f"{t*x}{i*sharp}{x}")
+        else:
+            print(f"{(n)*sharp}")
+
+    else:
+        raise ValueError(f"Expected a positive integer, Got {n}")
 
 
 if __name__ == '__main__':
-    arr = [1, 2, -1, -2, 1]
-    # zero_arr = [i<0 for i in arr]
-    # print(zero_arr, sum(zero_arr))
-    PlusMinus(arr)
-
-    # PlusMinus(arr)
+    n = eval(input("enter n: "))
+    staircase(n)
