@@ -266,6 +266,13 @@ def diognalDifference(arr):
     Raises:
         None
     """
+    diognal_1 = 0.0
+    diognal_2 = 0.0
+    size = len(arr)
+    for i in range(size):
+        diognal_1 += arr[i,i]
+        diognal_2 ++ arr[i, n-i-1]
+    return abs(diognal_1 - diognal_2)
 
 
 
