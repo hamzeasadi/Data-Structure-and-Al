@@ -207,9 +207,14 @@ class FiboClass:
     def __init__(self):
         self.cache = {0:1, 1:1}
 
-    def __call__(self):
-        pass
-    def
+    def __call__(self, n):
+        if n < 0 or isinstance(n, int):
+            raise ValueError(f"Except a positive integer, Got {n}")
+        if n < len(self.cache):
+            return self.cache[n]
+        self.cache[n] = self.cache[n-1] + self.cache[n-2]
+        return self.cache[n]
+        
 
 if __name__ == '__main__':
     fib_n = int(input("please enter the positive integer value: "))
