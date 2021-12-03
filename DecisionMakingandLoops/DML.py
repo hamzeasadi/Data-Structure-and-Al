@@ -225,7 +225,7 @@ def Armstrong(num):
     Raises:
         raise a value error if the given number is not a positive integer
     """
-    if not (num<1 and isinstance(num, int)):
+    if not (num>1 and isinstance(num, int)):
         raise ValueError(f"Expected a positive integer, Got {num}")
     else:
         n = len(str(num))
@@ -236,10 +236,16 @@ def Armstrong(num):
             num = num //10
         return (sum == temp)
 
-
+# define a pyramid
+def pyramid(n):
+    """
+    """
 
 
 if __name__ == '__main__':
-    arms = eval(input("please enter the positive integer value: "))
-    arms_ck = Armstrong(arms)
-    print("{arms} armstrong check: {arms_ck}")
+    # arms = eval(input("please enter the positive integer value: "))
+    # arms_ck = Armstrong(arms)
+    numbers = list(range(10, int(1e+5), 1))
+    arms_check = filter(Armstrong, numbers)
+    # print(f"{arms} armstrong check: {arms_ck}")
+    print(list(arms_check))
