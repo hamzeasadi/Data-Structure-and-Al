@@ -286,8 +286,16 @@ def PlusMinus(arr: list):
     Raises:
         None
     """
+    # list
+    # positive_pro =
 
 
 
 if __name__ == '__main__':
-    #
+    arr = [1, 0, 2, -1, -2, 0, 1]
+    # arr.sort()
+    # print(arr)
+    # print(dir(list))
+    # print(arr.index(0))
+    # print(arr.count(0))
+    # # PlusMinus(arr)
