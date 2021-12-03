@@ -4,6 +4,7 @@ import sys
 import os
 import cmath
 from fractions import Fraction
+import numpy as np
 # import keyword
 # print(help(keyword))
 # print(keyword.__doc__)
@@ -248,12 +249,25 @@ def pyramid(n):
     """
     if not(n>0 and isinstance(n, int)):
         raise ValueError(f"Expected a positive integer, Got {n}")
-        
+
     for i in range(n):
-        for j in range(n+1):
-            print("*", end='')
+        for j in range(i+1):
+            character = chr(65 + i + j)
+            print(f"{character} ", end='')
+        print()
+
+# define a function to subtract matrix diognals
+def diognalDifference(arr):
+    pass
+
 
 
 if __name__ == '__main__':
-    num_rows = eval(input("please enter the number of rows: "))
-    pyramid(num_rows)
+    income_e0 = np.array([125, 100, 70, 120, 60, 220, 75])
+    income_e1 = np.array([95, 85, 90])
+    income = np.concatenate((income_e0, income_e1), axis=0)
+    income_e0_stat = (income_e0.mean(), income_e0.std())
+    income_e1_stat = (income_e1.mean(), income_e1.std())
+    print(f"evade No: {income_e0_stat}, evade Yes: {income_e1_stat}")
+    print(income)
+    print(f"income stat: mean={income.mean()}, std={income.std()}")
