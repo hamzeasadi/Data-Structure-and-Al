@@ -293,9 +293,11 @@ def PlusMinus(arr: list):
 
 if __name__ == '__main__':
     arr = [1, 0, 2, -1, -2, 0, 1]
-    # arr.sort()
-    # print(arr)
-    # print(dir(list))
-    # print(arr.index(0))
-    # print(arr.count(0))
-    # # PlusMinus(arr)
+    arr.sort()
+    n = len(arr)
+    negatives = arr.index(0)
+    zeros = arr.count(0)
+    positives = n - zeros - negatives
+    print(f"{negatives/n:0.6f}\n {zeros/n:.6f}\n{positives/n:.6f}")
+
+    # PlusMinus(arr)
