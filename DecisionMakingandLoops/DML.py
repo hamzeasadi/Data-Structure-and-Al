@@ -217,7 +217,13 @@ class FiboClass:
 
 # check armstrong number of n digits
 def Armstrong(num):
-    """
+    """ get an n digit number as input and check if it is an armstrong number
+    args:
+        n: positive integer
+    return:
+        bool: a boolean number the shows a given number is armstrong or not
+    Raises:
+        raise a value error if the given number is not a positive integer
     """
 
 
