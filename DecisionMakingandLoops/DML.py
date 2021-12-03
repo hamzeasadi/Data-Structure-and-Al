@@ -323,8 +323,12 @@ def MinMaxSum(arr: list):
     Raises:
         None
     """
+    arr.sort()
+    min4 = sum(arr[:4])
+    max4 = sum(arr[-4:])
+    print(f"{min4}  {max4}")
 
 
 if __name__ == '__main__':
-    n = eval(input("enter n: "))
-    staircase(n)
+    arr = list(map(int, input().strip().split(',')))
+    MinMaxSum(arr)
