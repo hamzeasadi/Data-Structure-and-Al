@@ -312,6 +312,18 @@ def staricase(n: int):
     else:
         raise ValueError(f"Expected a positive integer, Got {n}")
 
+# define the min max sum function
+def MinMaxSum(arr: list):
+    """ the min max sum function calculate the summation of four smallest and largest values in given list
+    args:
+        arr: an arbitrary ary that its size is bigger than 4
+    return:
+        max4: summation of the 4 largest value in arr
+        min4: summation of the 4 smallest value in arr
+    Raises:
+        None
+    """
+
 
 if __name__ == '__main__':
     n = eval(input("enter n: "))
