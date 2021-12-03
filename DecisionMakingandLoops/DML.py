@@ -238,7 +238,13 @@ def Armstrong(num):
 
 # define a pyramid
 def pyramid(n):
-    """
+    """generate a pyramid with n row of stars
+    args:
+        n: number of rows that build the pyramid
+    return:
+        print out the pyramid
+    Raises:
+        ValueError: if n is not a positive integer
     """
 
 
