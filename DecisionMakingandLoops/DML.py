@@ -186,7 +186,7 @@ def fibonacci(n: int):
     Raises:
         raise an value error if the number is less than zero
     """
-    if n>0:
+    if n>-1:
         if n in cache.keys():
             return 1
         cache[n] = fibonacci(n-1) + fibonacci(n-2)
@@ -195,7 +195,23 @@ def fibonacci(n: int):
     else:
         raise ValueError(f"positive integer expected, got {n}")
 
+class FiboClass:
+    """this class is a blueprint for fibonacci series calculation
+        arg:
+            n: positive integer variable
+        return:
+            a(n): fibonacci value at position n --> a(n) = a(n-1) + a(n-2)
+        raises:
+            Raise an erro if n is negative
+    """
+    def __init__(self):
+        self.cache = {0:1, 1:1}
+
+    def __call__(self):
+        pass
+    def
+
 if __name__ == '__main__':
-    fib_n = int(input("please enter the positive integer value (,): "))
-    fib = simpleFibo(fib_n)
+    fib_n = int(input("please enter the positive integer value: "))
+    fib = fibonacci(fib_n)
     print(f"fibonaci({fib_n})={fib}")
