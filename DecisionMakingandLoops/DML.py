@@ -270,19 +270,17 @@ def diognalDifference(arr):
     diognal_2 = 0.0
     size = len(arr)
     for i in range(size):
-        diognal_1 += arr[i,i]
-        diognal_2 ++ arr[i, n-i-1]
+        diognal_1 += arr[i][i]
+        diognal_2 += arr[i][n-i-1]
     return abs(diognal_1 - diognal_2)
 
 
 
-if __name__ == '__main__':
-    fptr = open(os.environ('OUTPUT_PATH'), 'w')
-    n = int(input().strip())
-    arr = []
-    for _ in range(n):
-        arr.append(list(map(int, input().rstrip().split())))
+# define a function to print positive, negative, and zero porportion of an array
+def PlusMinus(arr):
+    pass
 
-    result = diognalDifference(arr)
-    fptr.write(str(result)+'\n')
-    fptr.close()
+
+
+if __name__ == '__main__':
+    #
