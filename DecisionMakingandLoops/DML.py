@@ -277,8 +277,15 @@ def diognalDifference(arr):
 
 
 # define a function to print positive, negative, and zero porportion of an array
-def PlusMinus(arr):
-    pass
+def PlusMinus(arr: list):
+    """ A function to print positive, negative, and zero porportion of an array
+    args:
+        arr: an arbitrary size array
+    return:
+        print the positive, negative and zero proportion
+    Raises:
+        None
+    """
 
 
 
