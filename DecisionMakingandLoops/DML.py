@@ -292,6 +292,14 @@ def PlusMinus(arr: list):
     positives = sum([x>0 for x in arr])/n
     print(f"{negatives:0.6f}\n {zeros:.6f}\n{positives:.6f}")
 
+# define a function to create a staircase of height n and width
+def staricase(n: int):
+    """ staircase witll take a integere and print out a starcaise of size n*n
+    args:
+        n: an arbitrary positive integer
+    Raises:
+        it will raise an value error if an negative number given
+    """
 
 
 if __name__ == '__main__':
