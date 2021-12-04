@@ -396,7 +396,14 @@ def hourglassSum(arr):
 
 # define RadianToDegree function
 def RadianToDegree(radian):
-    pass
+    """takes radian and convert it to degree
+    args:
+        radian: an arbitrary number
+    return:
+        degree: converted value of radian
+    Raises:
+        None
+    """
 
 
 
