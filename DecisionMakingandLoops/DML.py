@@ -348,7 +348,14 @@ def birthdayCakeCandles(candles):
 
 # define timeConversion function
 def timeConversion(s):
-    pass
+    """this function convert 12 oclock format time to 24 hour format
+    args:
+        s: time in 12 hour format
+    return:
+        time_24h_format: return a string for 24 hour format
+    raises:
+        None
+    """
 
 
 if __name__ == '__main__':
