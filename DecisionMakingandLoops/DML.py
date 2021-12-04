@@ -411,5 +411,5 @@ def RadianToDegree(radian):
 
 
 if __name__ == '__main__':
-    # radian = math.pi
-    # print(RadianToDegree(radian))
+    radian = math.pi
+    print(RadianToDegree(radian))
