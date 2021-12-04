@@ -5,6 +5,7 @@ import os
 import cmath
 from fractions import Fraction
 import numpy as np
+
 # import keyword
 # print(help(keyword))
 # print(keyword.__doc__)
@@ -289,7 +290,7 @@ def PlusMinus(arr: list):
     n = len(arr)
     negatives = sum([x<0 for x in arr])/n
     zeros = sum([x==0 for x in arr])/n
-    positives = sum([x>0 for x in arr])/n
+    positives = 1 - zero - negatives
     print(f"{negatives:0.6f}\n {zeros:.6f}\n{positives:.6f}")
 
 # define a function to create a staircase of height n and width
@@ -326,9 +327,9 @@ def MinMaxSum(arr: list):
     arr.sort()
     min4 = sum(arr[:4])
     max4 = sum(arr[-4:])
-    print(f"{min4}  {max4}")
+    print(f"{min4}  {max4} {isinstance(max4, int)}, {sys.getsizeof(max4)}")
 
 
-if __name__ == '__main__
-    arr = list(map(int, input().strip().split(',')))
+if __name__ == '__main__':
+    arr = list(map(int, input('enter 6 comma seperated numbers:').strip().split(',')))
     MinMaxSum(arr)
