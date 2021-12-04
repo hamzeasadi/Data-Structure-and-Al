@@ -394,15 +394,12 @@ def hourglassSum(arr):
             summations.append(x)
     print((summations), max(summations), len(summations))
 
+# define RadianToDegree function
+def RadianToDegree(radian):
+    pass
+
 
 
 
 if __name__ == '__main__':
-    arr_size = int(input("enter arr size: ").strip())
-    arr = []
-    for _ in range(arr_size):
-        arr.append(random.choices(list(range(0, 5)), k=arr_size))
-
-    print(arr)
-    # print(arr[1][2:5])
-    hourglassSum(arr)
+    arr_size
