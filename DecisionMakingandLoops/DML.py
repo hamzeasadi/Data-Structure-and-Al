@@ -342,11 +342,16 @@ def birthdayCakeCandles(candles):
             The second line contains  space-separated integers, where each integer  describes the height of.
         Raises:
         None
-        """
-        print(f"{candles.count(max(candles))}")
+    """
+    print(f"{candles.count(max(candles))}")
+
+
+# define timeConversion function
+def timeConversion(s):
+    pass
 
 
 if __name__ == '__main__':
     n = int(input("enter candle size (array size), and enter:"))
-    candles = list(map(int, input("enter candle array, space seperated:")))
+    candles = list(map(int, input("enter candle array, space seperated:").strip().split()))
     birthdayCakeCandles(candles)
