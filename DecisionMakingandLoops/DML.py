@@ -343,6 +343,7 @@ def birthdayCakeCandles(candles):
         Raises:
         None
         """
+        print(f"{candles.count(max(candles))}")
 
 
 if __name__ == '__main__':
