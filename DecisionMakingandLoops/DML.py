@@ -356,15 +356,21 @@ def timeConversion(s):
     raises:
         None
     """
+    s = s.strip()
     AM_PM = s[-2:]
     time_12h = list(map(int, s.rstrip('P, A, M').split(':')))
     if AM_PM == 'AM':
         if time_12h[0] != 12:
             return s[:-2]
-        return f"{00}:{time_12h[1]}:{time_12h[2]}"
+        return f"{0}{0}:{s[3:5]}:{s[6:8]}"
     else:
-        return f"{time_12h[0]+12}:{time_12h[1]}:{time_12h[2]}"
+        if time_12h[0] != 12:
+            return f"{time_12h[0]+12}:{s[3:5]}:{s[6:8]}"
+        return f"{time_12h[0]}:{s[3:5]}:{s[6:8]}"
 
+# define hourglassSum function
 
 if __name__ == '__main__':
-    # time_12h = input("enter 12 hour format").strip()
+    time_12h = input("enter 12 hour format: ").strip()
+    time_24h = timeConversion(time_12h)
+    print(time_24h)
