@@ -404,9 +404,12 @@ def RadianToDegree(radian):
     Raises:
         None
     """
+    return (radian/math.pi)*180
+
 
 
 
 
 if __name__ == '__main__':
-    arr_size
+    # radian = math.pi
+    # print(RadianToDegree(radian))
