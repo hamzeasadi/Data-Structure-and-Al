@@ -329,6 +329,21 @@ def MinMaxSum(arr: list):
     max4 = sum(arr[-4:])
     print(f"{min4}  {max4} {isinstance(max4, int)}, {sys.getsizeof(max4)}")
 
+# def birthdayCakeCandles function
+def birthdayCakeCandles(candles):
+    """Function Description
+        birthdayCakeCandles takes in a list and print out all max values
+        args:
+        candles[n]: the candle heights
+        Returns:
+            int: the number of candles that are tallest
+        Input Format:
+            The first line contains a single integer, , the size of .
+            The second line contains  space-separated integers, where each integer  describes the height of.
+        Raises:
+        None
+        """
+
 
 if __name__ == '__main__':
     arr = list(map(int, input('enter 6 comma seperated numbers:').strip().split(',')))
