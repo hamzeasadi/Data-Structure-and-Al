@@ -382,10 +382,27 @@ def hourglassSum(arr):
         hourgloass_max: maximum value related to hourglass
     Raises:
         None
+    """
+    summations = []
+
+    for i in range(len(arr)-2):
+        for j in range(len(arr)-2):
+            x = 0.0
+            x += sum(arr[i][j:j+3])
+            x += arr[i+1][j+1]
+            x + sum(arr[i+2][j:j+3])
+            summations.append(x)
+    print((summations), max(summations), len(summations))
+
 
 
 
 if __name__ == '__main__':
-    time_12h = input("enter 12 hour format: ").strip()
-    time_24h = timeConversion(time_12h)
-    print(time_24h)
+    arr_size = int(input("enter arr size: ").strip())
+    arr = []
+    for _ in range(arr_size):
+        arr.append(random.choices(list(range(0, 5)), k=arr_size))
+
+    print(arr)
+    # print(arr[1][2:5])
+    hourglassSum(arr)
