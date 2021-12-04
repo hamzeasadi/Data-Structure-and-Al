@@ -369,6 +369,21 @@ def timeConversion(s):
         return f"{time_12h[0]}:{s[3:5]}:{s[6:8]}"
 
 # define hourglassSum function
+def hourglassSum(arr):
+    """
+    An hourglass in  is a subset of values with indices falling in this pattern in arr's graphical representation:
+    a b c
+      d
+    e f g
+    this function find the hourglass and calculate their summation and return the max value
+    args:
+        arr: an aribitrary n*n matrix
+    return:
+        hourgloass_max: maximum value related to hourglass
+    Raises:
+        None
+
+
 
 if __name__ == '__main__':
     time_12h = input("enter 12 hour format: ").strip()
