@@ -347,5 +347,6 @@ def birthdayCakeCandles(candles):
 
 
 if __name__ == '__main__':
-    arr = list(map(int, input('enter 6 comma seperated numbers:').strip().split(',')))
-    MinMaxSum(arr)
+    n = int(input("enter candle size (array size), and enter:"))
+    candles = list(map(int, input("enter candle array, space seperated:")))
+    birthdayCakeCandles(candles)
