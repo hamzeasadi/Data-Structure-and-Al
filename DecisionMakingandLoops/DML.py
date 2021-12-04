@@ -356,9 +356,15 @@ def timeConversion(s):
     raises:
         None
     """
+    AM_PM = s[-2:]
+    time_12h = list(map(int, s.rstrip('P, A, M').split(':')))
+    if AM_PM == 'AM':
+        if time_12h[0] != 12:
+            return s[:-2]
+        return f"{00}:{time_12h[1]}:{time_12h[2]}"
+    else:
+        return f"{time_12h[0]+12}:{time_12h[1]}:{time_12h[2]}"
 
 
 if __name__ == '__main__':
-    n = int(input("enter candle size (array size), and enter:"))
-    candles = list(map(int, input("enter candle array, space seperated:").strip().split()))
-    birthdayCakeCandles(candles)
+    # time_12h = input("enter 12 hour format").strip()
