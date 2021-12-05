@@ -407,8 +407,17 @@ def RadianToDegree(radian):
     return (radian/math.pi)*180
 
 # define floatDecimal function
-def floatDecimal(*x):
-    pass
+def floatDecimal(x, y):
+    """ floatDecimal function takes two numbers and return their summation based on floating operator and decimal operator
+    args:
+        x, y: two arbitrary numbers
+    return:
+        None
+    print:
+        print the summation of two number based on decimal package and normal float operation
+    Raises:
+        None
+    """
 
 
 
