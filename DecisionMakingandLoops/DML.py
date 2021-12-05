@@ -473,6 +473,13 @@ random.seed(42)
 if __name__ == '__main__':
     n = int(input("input number of rows: ").strip())
     m = int(input("input number of columns: ").strip())
-    arr = random.choices(population=range(1, 10), k=n)
+    arr1 = []
+    arr2 = []
+    for _ in range(n):
+        arr1.append(random.choices(population=range(1, 10), k=m))
+    for _ in range(n):
+        arr2.append(random.choices(population=range(1, 10), k=m))
+    xx = MatrixAddition(arr1, arr2)
+    print(xx)
     # for i, j in itertools.product(range(3), range(4)):
     #     print(f"i={i}, j={j}")
