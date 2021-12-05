@@ -442,7 +442,7 @@ def appExt(mylist: list, *x):
     return mylist
 
 # define myInsert function
-def myInsert(arr: list, items, idx, use_insert=False):
+def myInsert(arr: list, *items, idx, use_insert=False):
     """ myInsert takes in a list and insert items in idx position
     args:
         arr: an arbitray size list
@@ -454,6 +454,14 @@ def myInsert(arr: list, items, idx, use_insert=False):
     Raises:
         ValueError is idx is out ot range
     """
+    if idx < len(arr):
+        if use_insert:
+            arr.insert(idx, list(items))
+        else:
+            arr[idx:idx] = list(items)
+        return arr
+    else:
+        raise IndexError(f"Expected index size less than {len(arr)}, Got {idx}")
 
 
 
@@ -463,9 +471,4 @@ random.seed(42)
 if __name__ == '__main__':
     n = int(input("input an integer number that is the size of list: ").strip())
     arr = random.choices(population=range(1, 10), k=n)
-    arr.append(2)
-    print(arr)
-    xx = del aar[2]
-    print(xx)
-    print(arr.remove(2))
-    print(arr.pop(0))
+    
