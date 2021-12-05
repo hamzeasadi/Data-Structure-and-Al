@@ -425,8 +425,16 @@ def floatDecimal(x, y):
     print(Fraction(sum_f))
 
 # define a function to append or extend a list
-def appExt(*x):
-    pass
+def appExt(mylist: list, *x):
+    """ appExt function based on the lenght of x execute append or extend on mylist
+    args:
+        mylist: a arbitray size list
+        x: an arbitray variablenumber of element to add to list
+    Returns:
+        my_extended_list: return the new created list
+    Raises:
+        None
+    """
 
 
 
