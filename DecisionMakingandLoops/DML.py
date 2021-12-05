@@ -422,6 +422,7 @@ def floatDecimal(x, y):
     sum_d = decimal.Decimal(x) + decimal.Decimal(y)
     sum_f = x+y
     print(f"sum_d={sum_d}, sum_f={sum_f}, {sum_f==sum_d}")
+    print(Fraction(sum_f))
 
 
 
