@@ -471,4 +471,4 @@ random.seed(42)
 if __name__ == '__main__':
     n = int(input("input an integer number that is the size of list: ").strip())
     arr = random.choices(population=range(1, 10), k=n)
-    new_arr = myInsert(arr)
+    print(arr.__sizeof__())
