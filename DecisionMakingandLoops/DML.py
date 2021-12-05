@@ -435,11 +435,14 @@ def appExt(mylist: list, *x):
     Raises:
         None
     """
-    my_extended_list = []
-    if len(x) < 2 :
-        = mylist.append(x[0])
-    my_extended_list = mylist.extend(list(x))
-    return my_extended_list
+    extended_list = []
+    if len(x) < 2:
+        mylist.append(x[0])
+    else:
+        mylist.extend(list(x))
+    # extended_list = mylist
+    return mylist
+
 
 
 
@@ -449,6 +452,11 @@ random.seed(42)
 if __name__ == '__main__':
     n = int(input("input an integer number that is the size of list: ").strip())
     arr = random.choices(population=range(1, 10), k=n)
+    print(arr)
+
     extra_elements = map(eval, input("enter the extera elements (comma seperated) to add to current list: ").strip().split(','))
     extra_elements = list(extra_elements)
+    print(extra_elements)
+
     my_new_list = appExt(arr, *extra_elements)
+    print(my_new_list)
