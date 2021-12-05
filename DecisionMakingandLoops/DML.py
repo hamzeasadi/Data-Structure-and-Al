@@ -424,6 +424,9 @@ def floatDecimal(x, y):
     print(f"sum_d={sum_d}, sum_f={sum_f}, {sum_f==sum_d}")
     print(Fraction(sum_f))
 
+# define a function to append or extend a list
+def appExt(*x):
+    pass
 
 
 
