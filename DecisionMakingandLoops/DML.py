@@ -435,6 +435,10 @@ def appExt(mylist: list, *x):
     Raises:
         None
     """
+    if len(x) < 2 :
+        return mylist.append(x[0])
+    return mylist.extend(list(x))
+
 
 
 
