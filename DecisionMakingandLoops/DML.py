@@ -435,14 +435,20 @@ def appExt(mylist: list, *x):
     Raises:
         None
     """
+    my_extended_list = []
     if len(x) < 2 :
-        return mylist.append(x[0])
-    return mylist.extend(list(x))
+        = mylist.append(x[0])
+    my_extended_list = mylist.extend(list(x))
+    return my_extended_list
 
 
 
 
+random.seed(42)
 
 if __name__ == '__main__':
-    x, y = map(float, input('Please enter two comma seperated floating point numbers: ').strip().split(','))
-    floatDecimal(x, y)
+    n = int(input("input an integer number that is the size of list: ").strip())
+    arr = random.choices(population=range(1, 10), k=n)
+    extra_elements = map(eval, input("enter the extera elements (comma seperated) to add to current list: ").strip().split(','))
+    extra_elements = list(extra_elements)
+    my_new_list = appExt(arr, *extra_elements)
