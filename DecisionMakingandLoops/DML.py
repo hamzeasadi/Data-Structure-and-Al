@@ -472,7 +472,7 @@ random.seed(42)
 
 if __name__ == '__main__':
     n = int(input("input number of rows: ").strip())
-    # m = int(input("input number of columns: ").strip())
-    # arr = random.choices(population=range(1, 10), k=n)
+    m = int(input("input number of columns: ").strip())
+    arr = random.choices(population=range(1, 10), k=n)
     # for i, j in itertools.product(range(3), range(4)):
     #     print(f"i={i}, j={j}")
