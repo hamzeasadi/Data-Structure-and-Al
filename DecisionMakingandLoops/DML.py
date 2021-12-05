@@ -442,8 +442,18 @@ def appExt(mylist: list, *x):
     return mylist
 
 # define myInsert function
-def myInsert(arr: list, items):
-    pass
+def myInsert(arr: list, items, idx, use_insert=False):
+    """ myInsert takes in a list and insert items in idx position
+    args:
+        arr: an arbitray size list
+        items: items that require to add to the list
+        idx: index which we add the items
+        use_insert: if it's true we use insert built-in function
+    Returns:
+        return the new list
+    Raises:
+        ValueError is idx is out ot range
+    """
 
 
 
