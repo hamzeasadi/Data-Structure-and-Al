@@ -5,6 +5,7 @@ import os
 import cmath
 from fractions import Fraction
 import numpy as np
+import decimal
 
 # import keyword
 # print(help(keyword))
@@ -418,6 +419,9 @@ def floatDecimal(x, y):
     Raises:
         None
     """
+    sum_d = decimal.Decimal(x) + decimal.Decimal(y)
+    sum_f = x+y
+    print(f"sum_d={sum_d}, sum_f={sum_f}, {sum_f==sum_d}")
 
 
 
