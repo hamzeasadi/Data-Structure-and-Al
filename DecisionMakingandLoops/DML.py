@@ -6,7 +6,7 @@ import cmath
 from fractions import Fraction
 import numpy as np
 import decimal
-
+import itertools
 # import keyword
 # print(help(keyword))
 # print(keyword.__doc__)
@@ -465,12 +465,14 @@ def myInsert(arr: list, *items, idx, use_insert=False):
 
 # define MatrixAddition function to add two matrix
 def MatrixAddition(arr1, arr2):
-    result = [arr1[i][j]+arr2[i][j] for i, j in range(len(arr1))]
+    result = [arr1[i][j]+arr2[i][j] for i,j in itertools.product(range(len(arr1)), range(len(arr1[0])))]
+    return result
 
 random.seed(42)
 
 if __name__ == '__main__':
-    n = int(input("input an integer number that is the size of list: ").strip())
+    n = int(input("input number of rows: ").strip())
+    m = int(input("input number of columns: ").strip())
     arr = random.choices(population=range(1, 10), k=n)
-    for i, j in range(3):
-        print(f"i={i}, j={j}")
+    # for i, j in itertools.product(range(3), range(4)):
+    #     print(f"i={i}, j={j}")
