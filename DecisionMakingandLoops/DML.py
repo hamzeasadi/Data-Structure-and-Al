@@ -463,12 +463,14 @@ def myInsert(arr: list, *items, idx, use_insert=False):
     else:
         raise IndexError(f"Expected index size less than {len(arr)}, Got {idx}")
 
-
-
+# define MatrixAddition function to add two matrix
+def MatrixAddition(arr1, arr2):
+    result = [arr1[i][j]+arr2[i][j] for i, j in range(len(arr1))]
 
 random.seed(42)
 
 if __name__ == '__main__':
     n = int(input("input an integer number that is the size of list: ").strip())
     arr = random.choices(population=range(1, 10), k=n)
-    print(arr.__sizeof__())
+    for i, j in range(3):
+        print(f"i={i}, j={j}")
