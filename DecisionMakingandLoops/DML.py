@@ -406,10 +406,14 @@ def RadianToDegree(radian):
     """
     return (radian/math.pi)*180
 
+# define floatDecimal function
+def floatDecimal(*x):
+    pass
+
 
 
 
 
 if __name__ == '__main__':
     radian = math.pi
-    print(RadianToDegree(radian))
+    print(((0.1+0.2)==0.3))
