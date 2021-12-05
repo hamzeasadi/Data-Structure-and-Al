@@ -428,5 +428,5 @@ def floatDecimal(x, y):
 
 
 if __name__ == '__main__':
-    radian = math.pi
-    print(((0.1+0.2)==0.3))
+    x, y = map(float, input('Please enter two comma seperated floating point numbers: ').strip().split(','))
+    floatDecimal(x, y)
