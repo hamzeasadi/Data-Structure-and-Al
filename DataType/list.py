@@ -7,3 +7,7 @@ import cmath
 from decimal import Decimal
 
 random.seed(42)
+
+
+if __name__ == '__main__':
+    pass
