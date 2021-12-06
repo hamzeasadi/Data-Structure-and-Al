@@ -35,7 +35,8 @@ def listMult(arr: list):
 
 
 def main():
-    pass
+    arr = list(map(eval, input("please enter element of an arry, comma seperated:").strip(' ,').split(',')))
+    out = listMult(arr)
 
 
 
