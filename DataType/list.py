@@ -24,8 +24,16 @@ def listMult(arr: list):
     else:
         # multValu = it.accumulate(arr, func=lambda x, y: x*y)
         # return list(multValu)[-1]
-        multValu = sum(list(map(lambda x,y:x*y, it.tee(arr, n=2))))
+        # multValu = math.prod(arr)
+        # return multValu
+        multValu = 1
+        for x in arr:
+            multValu *= x
         return multValu
+
+
+
+
 
 # def evenOdd function
 
