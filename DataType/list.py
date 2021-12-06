@@ -8,6 +8,18 @@ from decimal import Decimal
 
 random.seed(42)
 
+# def listMult function
+def listMult(arr: list):
+    pass
+
+
+
+
+
+
+
+
+
 
 
 if __name__ == '__main__':
