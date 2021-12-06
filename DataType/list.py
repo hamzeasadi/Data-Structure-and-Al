@@ -22,9 +22,10 @@ def listMult(arr: list):
     if any(isinstance(item, str) for item in arr):
         raise ValueError(f"Expected all elements to be numbers but Got String type as well")
     else:
-        multValu = it.accumulate(arr, func=math.prod)
-        return list(multValu)[-1]
-
+        # multValu = it.accumulate(arr, func=lambda x, y: x*y)
+        # return list(multValu)[-1]
+        multValu = sum(list(map(lambda x,y:x*y, it.tee(arr, n=2))))
+        return multValu
 
 # def evenOdd function
 
@@ -35,8 +36,12 @@ def listMult(arr: list):
 
 
 def main():
-    arr = list(map(eval, input("please enter element of an arry, comma seperated:").strip(' ,').split(',')))
+    # arr = list(map(eval, input("please enter element of an arry, comma seperated:").strip(' ,').split(',')))
+    n = int(input("enter array size: "))
+    arr = random.choices(range(1, 5), k=n)
     out = listMult(arr)
+    print(arr)
+    print(out)
 
 
 
