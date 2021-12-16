@@ -36,6 +36,15 @@ def listMult(arr: list):
 
 
 # def a shape function for list
+def shape(arr: list):
+    """this function takes in a list and return it's shape
+    args:
+        arr: an arbitrary size list
+    returns:
+        a tuple that shows the list shape
+    raises:
+        if it's not a list raise TypeError
+    """
 
 
 
