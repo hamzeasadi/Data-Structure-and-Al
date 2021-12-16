@@ -35,7 +35,7 @@ def listMult(arr: list):
 
 
 
-# def evenOdd function
+# def a shape function for list
 
 
 
