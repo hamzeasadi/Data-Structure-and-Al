@@ -45,6 +45,23 @@ def shape(arr: list):
     raises:
         if it's not a list raise TypeError
     """
+    n = len(arr)
+    if (n>0 and isinstance(arr, list)):
+        dim = [n]
+        if len(arr[0]>0):
+            dim.append(len(arr[0]))
+        elif len(arr[0][0])>0:
+            dim.append(len(arr[0][0]))
+        elif len(arr[0][0][0])>0:
+            dim.append(len(arr[0][0][0]))
+        elif len(arr[0][0][0][0])>0:
+            dim.append(len(arr[0][0][0][0]))
+        elif len(arr[0][0][0][0][0])>0:
+            dim.append(len(arr[0][0][0][0][0]))
+        else:
+            return tuple(arr)
+    else:
+        raise TypeError(f"Expected a list, Got {arr}")
 
 
 
@@ -55,7 +72,7 @@ def shape(arr: list):
 def main():
     # arr = list(map(eval, input("please enter element of an arry, comma seperated:").strip(' ,').split(',')))
     mytuple = ([1, 2, [1, 2]])
-    print(type(mytuple[2]))
+    
 
 
 
