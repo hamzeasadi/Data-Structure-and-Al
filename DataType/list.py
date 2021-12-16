@@ -45,11 +45,8 @@ def listMult(arr: list):
 
 def main():
     # arr = list(map(eval, input("please enter element of an arry, comma seperated:").strip(' ,').split(',')))
-    n = int(input("enter array size: "))
-    arr = random.choices(range(1, 5), k=n)
-    out = listMult(arr)
-    print(arr)
-    print(out)
+    mytuple = ([1, 2, [1, 2]])
+    print(type(mytuple[2]))
 
 
 
