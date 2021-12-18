@@ -2,20 +2,23 @@ import random
 import os
 import cmath
 
-def count(string: str, character):
+def count_substring(string, sub_string):
+    string = string.strip()
+    sub_string = sub_string.strip()
     cnt = 0
-    for x in string:
-        if x==character:
-            cnt+=1
-    return cnt
+    ls = len(string)
+    lss = len(sub_string)
+    for i in range(ls):
+        if string[i:lss+i] == sub_string:
+            cnt += 1
 
 
 
 def main():
-    mystr = 'pycharm'
-    del mystr
-    print(mystr)
-
-
+    string, substring = input("please enter string, substring: ").strip().split(',')
+    string = string.strip()
+    substring = substring.strip()
+    print(f"{string}, {substring}")
+    Count(string, substring)
 if __name__ == '__main__':
     main()
