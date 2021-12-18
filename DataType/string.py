@@ -12,13 +12,20 @@ def count_substring(string, sub_string):
         if string[i:lss+i] == sub_string:
             cnt += 1
 
+def textAlignment(thickness, c):
+    for i in range(thickness):
+        print((c*i).rjust(thickness-1)+c+(c*i).ljust(thickness-1))
+
+    for i in range(thickness+1):
+        print((c*thickness).center(thickness*2)+(c*thickness).center(thickness*6))
+
+    for i in range((thickness+1)//2):
+        print((c*thickness*5).______(thickness*6))
 
 
 def main():
-    string, substring = input("please enter string, substring: ").strip().split(',')
-    string = string.strip()
-    substring = substring.strip()
-    print(f"{string}, {substring}")
-    Count(string, substring)
+    thickness = int(input("please enter thickness: ").strip())
+    textAlignment(thickness, 'H')
+
 if __name__ == '__main__':
     main()
