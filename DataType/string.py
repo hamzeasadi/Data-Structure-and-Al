@@ -25,6 +25,9 @@ def textAlignment(thickness, c):
     for i in range(thickness+1):
         print((c*thickness).center(thickness*2)+(c*thickness).center(thickness*6))
 
+    for i in range(thickness):
+        print(((c*(thickness-i-1)).rjust(thickness)+c+(c*(thickness-i-1)).ljust(thickness)).ljust(thickness*6))
+
 
 def main():
     thickness = int(input("please enter thickness: ").strip())
