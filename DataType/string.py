@@ -1,6 +1,7 @@
 import random
 import os
 import cmath
+import textwrap
 
 def count_substring(string, sub_string):
     string = string.strip()
@@ -30,12 +31,31 @@ def textAlignment(thickness, c):
 
 
 def wrap(string, max_width):
-    pass
+    string += '\n'
+    output = textwrap.wrap(text=string, width=max_width)
+    output = '\n'.join(output)
+    return output
+
+def coordinate(x, y, z, n):
+    x = set([(i,) for i in range(x)])
+    y = set([(i,) for i in range(y)])
+    z = set([(i,) for i in range(z)])
+    allset = x.union(y.union(z))
+    print(list(allset))
+
+def Prob(a, b, c):
+    h = min(c, a)
+    w = min(c, b)
+    return (0.5*h*w)/(a*b)
 
 
 def main():
-    thickness = int(input("please enter thickness: ").strip())
-    textAlignment(thickness, 'H')
+    a, b, c = list(map(int, input("a, b, c: ").strip().split(',')))
+
+    print(Prob(a,b,c))
+
+
+
 
 if __name__ == '__main__':
     main()
