@@ -6,7 +6,8 @@ import random
 
 
 def findPoint(px, py, qx, qy):
-    pass
+    r = [2*qx-px, 2*qy-py]
+    return r
 
 
 
