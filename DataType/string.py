@@ -20,7 +20,7 @@ def textAlignment(thickness, c):
         print((c*thickness).center(thickness*2)+(c*thickness).center(thickness*6))
 
     for i in range((thickness+1)//2):
-        print((c*thickness*5).______(thickness*6))
+        print((c*thickness*5).center(thickness*6))
 
 
 def main():
