@@ -22,7 +22,9 @@ def handshake(n):
     returns:
         hs: number of handshakes
     """
-    pass
+    return (n*(n-1))/2
+
+    
 
 
 def main():
