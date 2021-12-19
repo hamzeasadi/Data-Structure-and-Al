@@ -22,9 +22,17 @@ def handshake(n):
     returns:
         hs: number of handshakes
     """
-    return (n*(n-1))/2
+    return int((n*(n-1))/2)
 
-    
+def lowestTriangle(a, b):
+    """given triangle area (a) and it's base (b) find smallest height(h)
+    args:
+        a, b: int
+    return:
+        h
+    """
+    return (2*a)/b
+
 
 
 def main():
