@@ -4,6 +4,8 @@ import pygame
 SCREEN_WIDTH = 800
 SCREEN_HIGHT = 600
 
+black = (0,0,0)
+white = (255,255,255)
 
 
 def main():
@@ -18,9 +20,12 @@ def main():
             if event.type == pygame.QUIT:
                 running = False
             print(event)
+
+
         pygame.display.update()
         clock.tick(60)
 
+    pygame.quit()
 
 
 if __name__ == '__main__':
