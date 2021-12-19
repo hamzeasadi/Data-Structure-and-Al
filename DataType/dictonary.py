@@ -1,11 +1,20 @@
 import os
 import math
+from faker import Faker
+
+
+
+
+
 
 
 
 def main():
-    pass
-
+    fake = Faker()
+    dictionary = open('list.py', mode='r', encoding='utf-8')
+    print(dir(dictionary))
+    for line in dictionary.readlines():
+        print(line)
 
 if __name__ == '__main__':
     main()
