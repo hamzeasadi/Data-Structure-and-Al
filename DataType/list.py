@@ -65,7 +65,8 @@ def shape(arr: list):
         return tuple(dim)
 
 
-
+def runner_up_score(arr)
+pass
 
 
 
