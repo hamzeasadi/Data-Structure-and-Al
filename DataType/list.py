@@ -74,6 +74,15 @@ def runner_up_score(arr):
             break
     print(temp)
 
+def nestedlist(arr):
+    arr.sort()
+    print(arr)
+    temp = min(arr)
+    for i in arr:
+        if i>temp:
+            temp=i
+            break
+    print(temp)
 
 
 
@@ -82,7 +91,7 @@ def main():
     # arr = list(map(eval, input("please enter element of an arry, comma seperated:").strip(' ,').split(',')))
     x = random.choices(range(3, 10), k=10)
     x = [1, 2, 3, 4, 4,5,5]
-    runner_up_score(x)
+    nestedlist(x)
 
 
 if __name__ == '__main__':
