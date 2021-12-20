@@ -86,12 +86,13 @@ def nestedlist(arr):
 
 
 def merge_the_tools(string, k):
-    # your code goes here
     t = int(len(string)/k)
-    for i in range(len(string)-t):
-        block_t = set(string[i:t+i])
-        print(block_t)
-        # print(''.join(block_t))
+    for i in range(k):
+        block_t = set(string[i*t:t*(i+1)])
+        block_idx = [list(string[i*t:t*(i+1)]).index(x) for x in block_t ]
+        block_idx.sort()
+        out = [string[i*t:t*(i+1)][x] for x in block_idx]
+        print(''.join(out))
 
 
 
