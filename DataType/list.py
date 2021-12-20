@@ -85,24 +85,19 @@ def nestedlist(arr):
     indc = [i for i, x in enumerate(arr[0]) if x==temp]
 
 
-
+def merge_the_tools(string, k):
+    # your code goes here
+    t = int(len(string)/k)
+    for i in range(len(string)-t):
+        block_t = set(string[i:t+i])
+        print(block_t)
+        # print(''.join(block_t))
 
 
 
 def main():
-    n = int(input('enter n: '))
-    mylist = []
-    for i in range(n):
-        command = input().strip().split()
-        if len(command)==1:
-            if command[0]=='print':
-                print(mylist)
-            else:
-                exec(f'{mylist}.{command[0]}()')
-        if len(command)==2:
-            exec(f'{mylist}.{command[0]}({command[1]})')
-        if len(command)==3:
-            exec(f'{mylist}.{command[0]}({command[1]}, {command[2]})')
+    string, k = input(), int(input())
+    merge_the_tools(string, k)
 
 
 
