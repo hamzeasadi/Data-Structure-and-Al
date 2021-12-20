@@ -87,18 +87,21 @@ def nestedlist(arr):
 
 def merge_the_tools(string, k):
     t = int(len(string)/k)
-    for i in range(k):
-        block_t = set(string[i*t:t*(i+1)])
-        block_idx = [list(string[i*t:t*(i+1)]).index(x) for x in block_t ]
+    for i in range(t):
+        block_t = set(string[i*k:k*(i+1)])
+        block_idx = [list(string[i*k:k*(i+1)]).index(x) for x in block_t ]
         block_idx.sort()
-        out = [string[i*t:t*(i+1)][x] for x in block_idx]
+        out = [string[i*k:k*(i+1)][x] for x in block_idx]
         print(''.join(out))
 
+def poly_check():
+    x, k = list(map(int, input().strip().split()))
+    poly_eq = input().strip()
+    exec(f'print(k == {poly_eq})')
 
 
 def main():
-    string, k = input(), int(input())
-    merge_the_tools(string, k)
+    poly_check()
 
 
 
