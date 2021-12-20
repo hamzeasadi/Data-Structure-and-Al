@@ -65,9 +65,14 @@ def shape(arr: list):
         return tuple(dim)
 
 
-def runner_up_score(arr)
-pass
-
+def runner_up_score(arr):
+    arr.sort(reverse=True)
+    temp = max(arr)
+    for i in arr:
+        if i<temp:
+            temp=i
+            break
+    print(temp)
 
 
 
@@ -75,11 +80,9 @@ pass
 
 def main():
     # arr = list(map(eval, input("please enter element of an arry, comma seperated:").strip(' ,').split(',')))
-    mytuple = ([1, 2, [1, 2]])
-    mylist = [[[1, 2], [3, 4]], [[1, 2], [3, 4]]]
-    listshape = shape(mylist)
-    print(listshape)
-
+    x = random.choices(range(3, 10), k=10)
+    x = [1, 2, 3, 4, 4,5,5]
+    runner_up_score(x)
 
 
 if __name__ == '__main__':
