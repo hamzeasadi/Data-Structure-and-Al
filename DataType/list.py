@@ -99,9 +99,13 @@ def poly_check():
     poly_eq = input().strip()
     exec(f'print(k == {poly_eq})')
 
+def TriangleQuest(N):
+    for i in range(N):
+        print((i+1)*str(i+1))
 
 def main():
-    poly_check()
+    n=5
+    TriangleQuest(n)
 
 
 
