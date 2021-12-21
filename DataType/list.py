@@ -100,8 +100,8 @@ def poly_check():
     exec(f'print(k == {poly_eq})')
 
 def TriangleQuest(N):
-    for i in range(N):
-        print((i+1)*str(i+1))
+    for i in range(1, N):
+        print(((10**i)//9)**2)
 
 def main():
     n=5
