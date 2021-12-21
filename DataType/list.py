@@ -118,9 +118,13 @@ def PowerMod(a, b, m):
     print(pow(a, b))
     print(pow(a,b, m))
 
+def TriangleQuest(N):
+    for i in range(1, N):
+        print((pow(10, i)//9)*i)
+
 
 def main():
-    DivMod(177, 10)
+    TriangleQuest(5)
 
 
 
