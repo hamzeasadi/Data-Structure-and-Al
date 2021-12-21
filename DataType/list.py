@@ -122,9 +122,15 @@ def TriangleQuest(N):
     for i in range(1, N):
         print((pow(10, i)//9)*i)
 
+def Capitlize(s):
+    s_ar = s.strip().split()
+    final_ar = ''
+    for w in s_ar:
+        final_ar += final_ar.append(w.capitalize())
+    return final_ar
 
 def main():
-    TriangleQuest(5)
+    Capitlize(input())
 
 
 
