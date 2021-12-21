@@ -103,14 +103,20 @@ def TriangleQuest(N):
     for i in range(1, N):
         print(((10**i)//9)**2)
 
-def AngleMBC():
+def AngleMBC(AB, BC):
     degree_sign = u"\N{DEGREE SIGN}"
     theta = math.atan2(AB, BC)*180/math.pi
     print(fr'{round(theta)}{degree_sign}')
 
+def ModDivmod(a, b):
+    # import division from __future__
+    print(a//b)
+    print(a%b)
+    print(divmod(a, b))
+
+
 def main():
-    n=5
-    TriangleQuest(n)
+    ModDivmod(177, 10)
 
 
 
