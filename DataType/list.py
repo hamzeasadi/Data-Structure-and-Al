@@ -108,15 +108,19 @@ def AngleMBC(AB, BC):
     theta = math.atan2(AB, BC)*180/math.pi
     print(fr'{round(theta)}{degree_sign}')
 
-def ModDivmod(a, b):
+def DivMod(a, b):
     # import division from __future__
     print(a//b)
     print(a%b)
     print(divmod(a, b))
 
+def PowerMod(a, b, m):
+    print(pow(a, b))
+    print(pow(a,b, m))
+
 
 def main():
-    ModDivmod(177, 10)
+    DivMod(177, 10)
 
 
 
