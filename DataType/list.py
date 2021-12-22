@@ -124,10 +124,10 @@ def TriangleQuest(N):
 
 def Capitlize(s):
     s_ar = s.strip().split()
-    final_ar = ''
+    final_ar = []
     for w in s_ar:
-        final_ar += final_ar.append(w.capitalize())
-    return final_ar
+        final_ar.append(w.capitalize())
+    print(' '.join(final_ar))
 
 def main():
     Capitlize(input())
