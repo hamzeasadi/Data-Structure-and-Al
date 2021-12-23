@@ -32,11 +32,17 @@ class PowTwo(object):
             raise StopIteration
 
 
+def all_even():
+	n=0
+	while True:
+		n+=1
+		yield 2*n
+
 
 
 def main():
-    for i in PowTwo(10):
-        print(i)
-
+	x = all_even()
+	for i in range(10):
+		print(next(x))
 if __name__ == '__main__':
     main()
