@@ -40,9 +40,27 @@ def all_even():
 
 
 
+def fibo_numbers(nums):
+	x,y=0,1
+	i=0
+	while i<nums:
+		x, y = y, x+y
+		yield x
+		i+=1	
+
+
+
+
 def main():
-	x = all_even()
-	for i in range(10):
-		print(next(x))
+	n =10 
+	fibo = fibo_numbers(n)
+	for x in fibo:
+		print(x)
+
+
+
+
+
 if __name__ == '__main__':
+
     main()
