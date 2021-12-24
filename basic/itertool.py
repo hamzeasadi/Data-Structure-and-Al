@@ -18,10 +18,18 @@ def mysub(a, b):
 	return b-a
 
 def orderper(s, k):
-	pass
+	x = list(s)
+	x.sort()
+	out = itertools.combinations(x, k)
+	return out
+		
 
 def main():
 
+	x = list(input().strip())
+	print(x)
+	x.sort()
+	print(x)
 
 
 
