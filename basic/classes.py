@@ -1,13 +1,4 @@
-class Range():
-    def __init__(self, N):
-        self.max = N
-        self.n = 0
-
-    def __iter__(self):
-        return self
-
-    def __next__(self):
-        if self.n<self.max:
+class Range(): def __init__(self, N): self.max = N self.n = 0 def __iter__(self): return self def __next__(self): if self.n<self.max:
             self.n+=1
             return self.n
         else:
@@ -48,14 +39,16 @@ def fibo_numbers(nums):
 		yield x
 		i+=1	
 
+def Squar(nums):
+	for num in range(nums):
+		yield num**2
 
 
 
 def main():
 	n =10 
-	fibo = fibo_numbers(n)
-	for x in fibo:
-		print(x)
+	fibo = Squar(fibo_numbers(n))
+	print(sum(fibo))
 
 
 
