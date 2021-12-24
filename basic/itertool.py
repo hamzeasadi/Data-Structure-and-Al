@@ -1,4 +1,6 @@
 import itertools
+import random
+
 from itertools import count
 
 
@@ -12,11 +14,15 @@ def palindrome(n):
 	out = ((10**n)//9)**2
 	return out
 
+def mysub(a, b):
+	return b-a
+
+def orderper(s, k):
+	pass
+
 def main():
-	for i in mycount(1, 1):
-		print(palindrome(i))
-		if i>8:
-			break	
+
+
 
 
 if __name__ == '__main__':
