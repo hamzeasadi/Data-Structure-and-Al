@@ -15,6 +15,7 @@ def main():
     n, x = map(eval, input("Please enter n, x: ").strip(' ,').split(','))
     mymul = multiplierof(n)
     mymul(x)
+    print(dir(multiplierof))
 
 
 
