@@ -14,6 +14,9 @@ def main():
     X = int(input().strip())
     shoe_size_list = map(int, input().strip().split())
     size_counter = Counter(shoe_size_list)
+    sum = ''
+    for i in size_counter.values():
+        print(i)
 
 if __name__ == '__main__':
     main()
