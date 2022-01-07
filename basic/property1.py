@@ -14,7 +14,6 @@ def saySth(a):
 
 def main():
     a = input("please enter some warm welcom sentences: ").strip(' ')
-    # saysth = dotwice(saySth)
     saySth(a)
 
 
