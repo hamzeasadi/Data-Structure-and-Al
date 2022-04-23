@@ -7,11 +7,15 @@ my_parser = argparse.ArgumentParser(description='this arg parser takes two dates
 my_parser.add_argument('--birthDate', type=str, required=True)
 my_parser.add_argument('--endDate', type=str, default=str(date.today()))
 
-dates = vars(my_parser.parse_args())
-
-print(dates)
-print(date.today())
-
+def nextDay(*date):
+    year, month, day = date[0], date[1], date[3]
+    if day<30:
+        return year, month, day+1
+    elif month < 12:
+        return year, month+1, 1
+    else:
+        return year+1, 1, 1
+        
 
 
 
