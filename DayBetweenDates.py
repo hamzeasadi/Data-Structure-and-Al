@@ -19,11 +19,7 @@ def nextDay(*date):
     else:
         return year+1, 1, 1
 
-def dayBetweenDates(*dates):
-    year1, month1, day1 = dates[0], dates[1], dates[2]
-    year2, month2, day2 = dates[3], dates[4], dates[5]
-    date1 = dates[0:3]
-    date2 = dates[3:]
+def dayBetweenDates(date1, date2):
     days = 0
     while isBefore(date1, date2):
         days+=1
@@ -47,8 +43,7 @@ def isBefore(date1, date2):
 def main():
     birthdate = list(map(int, my_parser.parse_args().birth_date[0].split('-')))
     enddate = list(map(int, my_parser.parse_args().end_date.split('-')))
-    print(enddate)
-    print(birthdate)
+    print(dayBetweenDates(date1=birthdate, date2=enddate))
 
 if __name__ == '__main__':
     main()
