@@ -1,27 +1,34 @@
 import sys, os, argparse
 
 
-class Queue():
-
+class Queue:
 	def __init__(self):
 		self.queue = []
-		self.tail = -1
-		self.head = 0
+		self.front = -1
+		self.rear = -1
+
+	def isEmpty(self):
+
+		return self.rear == self.front-1
 
 	def enqueue(self, item):
-		self.queue.append(item)
-		self.tail += 1
+		if self.front < 0:
+			self.front = 0
 
+		self.rear += 1
+		return self.queue.append(item)
+	
 	def dequeue(self):
-
-		if self.tail>=self.head:
-			out = self.queue[self.head]
-			self.head += 1
-			return out
-
-		else:
+		
+		if self.isEmpty():
+			
 			return "queue is empty"
 
+		else:
+			out = self.queue[self.front]
+			self.front += 1
+			return out
+		
 		
 
 def main():
